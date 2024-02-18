@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Save Page View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="SavePage" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="SavePageViewController" customModule="Picture_Generator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gIA-gz-NNR">
+                                <rect key="frame" x="16" y="91" width="361" height="463"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="463" id="PE2-Ji-Ops"/>
+                                    <constraint firstAttribute="width" constant="361" id="gjm-Ox-jju"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="reQ-5r-2ce">
+                                <rect key="frame" x="16" y="594" width="361" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Save"/>
+                                <connections>
+                                    <action selector="saveButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="h4V-Hh-8L6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fah-LN-K39">
+                                <rect key="frame" x="16" y="653" width="361" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Share"/>
+                                <connections>
+                                    <action selector="shareButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="CSQ-05-uKs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5YX-tG-k2W">
+                                <rect key="frame" x="16" y="712" width="361" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Share to FB"/>
+                                <connections>
+                                    <action selector="shareFacebookTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="SyE-q6-S4K"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5YX-tG-k2W" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="90u-6m-KS8"/>
+                            <constraint firstItem="gIA-gz-NNR" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="CiI-oa-8Yn"/>
+                            <constraint firstItem="fah-LN-K39" firstAttribute="top" secondItem="reQ-5r-2ce" secondAttribute="bottom" constant="24" id="Ghz-gi-OUE"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="gIA-gz-NNR" secondAttribute="trailing" constant="16" id="Hio-pL-xo5"/>
+                            <constraint firstItem="gIA-gz-NNR" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="32" id="XbK-FX-Bpg"/>
+                            <constraint firstItem="reQ-5r-2ce" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="Zwt-9s-VWJ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="5YX-tG-k2W" secondAttribute="trailing" constant="16" id="cf3-RQ-e4i"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="reQ-5r-2ce" secondAttribute="trailing" constant="16" id="eMC-EK-7CT"/>
+                            <constraint firstItem="reQ-5r-2ce" firstAttribute="top" secondItem="gIA-gz-NNR" secondAttribute="bottom" constant="40" id="fpW-NC-3VP"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="fah-LN-K39" secondAttribute="trailing" constant="16" id="jr3-e0-hNx"/>
+                            <constraint firstItem="fah-LN-K39" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="mtg-yU-aYe"/>
+                            <constraint firstItem="5YX-tG-k2W" firstAttribute="top" secondItem="fah-LN-K39" secondAttribute="bottom" constant="24" id="zQK-tu-eeE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="saveButtonLabel" destination="reQ-5r-2ce" id="63i-7I-dE0"/>
+                        <outlet property="saveImage" destination="gIA-gz-NNR" id="Qk9-99-hqv"/>
+                        <outlet property="shareButtonLabel" destination="fah-LN-K39" id="kwM-HL-Jnl"/>
+                        <outlet property="shareFacebookLabel" destination="5YX-tG-k2W" id="S8L-Mn-N8L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-31.297709923664122" y="-20.422535211267608"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
